@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050506">
+  <title>Video Editing | R4W LABS</title>
+  <meta name="description" content="Reels edited by R4W LABS, sorted by industry: cafés, hotels, real estate, healthcare, events and entertainment.">
+  <meta property="og:title" content="Video Editing | R4W LABS">
+  <meta property="og:image" content="/brand/r4w-labs-og.png">
+  <link rel="icon" type="image/png" href="/brand/favicon.png">
+  <link rel="stylesheet" href="/src/styles.css">
+</head>
+<body class="page-video is-loading">
+<!-- @include loader -->
+<!-- @include header -->
+
+<main id="main">
+  <section class="vhero">
+    <div class="wrap">
+      <a class="back" href="/#services">← Back to home</a>
+      <p class="eyebrow">Video Editing</p>
+      <h1>Raw clips in.<br><em>Scroll-stoppers out.</em></h1>
+      <p class="vhero-sub">Every reel here was cut, coloured and finished by R4W LABS. Tap any reel to watch it in full with sound.</p>
+      <div class="vhero-meta">
+        <span><b id="reelCount">0</b> reels</span>
+        <span><b id="industryCount">0</b> categories</span>
+        <span>Shot &amp; edited in Indore</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec top-reels vtop" id="top">
+    <div class="wrap sec-head">
+      <div>
+        <p class="eyebrow">Top</p>
+        <h2>Start here. <em>Our best cuts.</em></h2>
+      </div>
+    </div>
+    <div class="reels-mount" id="topReels" data-size="lg"></div>
+  </section>
+
+  <nav class="chips" id="industryChips" aria-label="Categories"></nav>
+
+  <div id="industryRows"></div>
+
+  <!-- IN THE WILD -->
+  <section class="sec wild" id="wild">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <p class="eyebrow">In the wild</p>
+          <h2>No order. <em>Just good edits.</em></h2>
+        </div>
+        <button class="link-arrow" id="wildShuffle" type="button">Shuffle <span aria-hidden="true">↻</span></button>
+      </div>
+      <div id="wildReels"></div>
+    </div>
+  </section>
+
+  <section class="sec deliver light">
+    <div class="wrap deliver-grid">
+      <div>
+        <p class="eyebrow">What we do</p>
+        <h2>From source footage to <em>final cut.</em></h2>
+        <p>We pick the strongest moments, build the rhythm, then finish the edit with colour, sound and graphics. You get versions cut for every channel you post on.</p>
+      </div>
+      <ul class="deliver-list" role="list">
+        <li>Reels and shorts</li><li>Brand films</li><li>Colour grading</li><li>Sound design</li><li>Motion graphics</li><li>Subtitles</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec contact vcta">
+    <div class="wrap vcta-in">
+      <h2>Want reels like these <em>for your brand?</em></h2>
+      <a class="btn btn-red" data-wa href="/#contact">Talk to R4W LABS <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</main>
+
+<!-- @include footer -->
+<script type="module" src="/src/video-editing.js"></script>
+</body>
+</html>

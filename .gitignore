@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.cache/
+.DS_Store
+# Source videos are large; the web-ready copies in public/media are what the site uses.
+videos/**
+!videos/README.txt
