@@ -609,3 +609,14 @@ body { background: radial-gradient(130% 95% at 82% -18%, rgba(255,255,255,.7) 0%
 /* Landscape reels in the carousel: whole frame over a blurred copy */
 .cf-card.land img:not(.cf-bg), .cf-card.land video { object-fit: contain; }
 .cf-card .cf-bg { filter: blur(22px) saturate(1.2) brightness(.75); transform: scale(1.3); }
+/* Loader clouds */
+.loader-sky { position: absolute; z-index: 0; }
+.loader-mark, .loader-meta, .loader-bar { z-index: 1; }
+/* Tighter section rhythm */
+.sec { padding: clamp(56px, 7vw, 104px) 0; }
+.top-reels { padding-bottom: clamp(40px, 5vw, 72px); }
+.contact { padding-bottom: clamp(64px, 8vw, 110px); }
+/* About glows were clipped into hard edges on the sky */
+.about::before, .about::after { display: none; }
+/* Footer text on the dark footer */
+.foot { color: #fff; }
