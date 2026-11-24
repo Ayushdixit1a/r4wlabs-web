@@ -16,7 +16,7 @@ try {
 Promise.all([playLoader(), word?.ready]).then(() => word?.release());
 
 // Count the numbers up the first time the stats come into view.
-const stats = document.querySelector('.stats');
+const stats = document.querySelector('.about-stats');
 if (stats && !reducedMotion.matches) {
   new IntersectionObserver(([entry], io) => {
     if (!entry.isIntersecting) return;
@@ -97,11 +97,10 @@ document.querySelectorAll('.svc-box').forEach(card => {
 });
 
 if (finePointer.matches) {
-  document.querySelectorAll('.about-panel').forEach(panel => {
-    panel.addEventListener('pointermove', event => {
-      const rect = panel.getBoundingClientRect();
-      panel.style.setProperty('--gx', `${((event.clientX - rect.left) / rect.width) * 100}%`);
-      panel.style.setProperty('--gy', `${((event.clientY - rect.top) / rect.height) * 100}%`);
-    }, { passive: true });
-  });
+  const about = document.querySelector('.about'), cross = document.querySelector('.about-cross');
+  about?.addEventListener('pointermove', event => {
+    const rect = about.getBoundingClientRect();
+    cross.style.setProperty('--cx', `${((event.clientX - rect.left) / rect.width - .5) * 40}px`);
+    cross.style.setProperty('--cy', `${((event.clientY - rect.top) / rect.height - .5) * 40}px`);
+  }, { passive: true });
 }
