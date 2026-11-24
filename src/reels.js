@@ -341,7 +341,8 @@ export function mountCarousel(mount, items, { label = 'Reels', emptyHint = '', i
     <div class="cf">
       <div class="cf-stage" tabindex="0" role="group" aria-roledescription="carousel" aria-label="${escapeHtml(label)}">
         ${items.map((item, i) => `
-          <button class="cf-card" type="button" data-i="${i}" aria-label="Play reel ${i + 1}">
+          <button class="cf-card${item.width > item.height ? ' land' : ''}" type="button" data-i="${i}" aria-label="Play reel ${i + 1}">
+            ${item.width > item.height ? `<img class="cf-bg" src="${escapeHtml(mediaUrl(item.poster))}" alt="" loading="lazy" decoding="async" draggable="false" aria-hidden="true">` : ''}
             <img src="${escapeHtml(mediaUrl(item.poster))}" alt="" loading="lazy" decoding="async" draggable="false">
             <video muted loop playsinline preload="none" data-src="${escapeHtml(mediaUrl(item.preview))}" tabindex="-1" aria-hidden="true"></video>
             <span class="reel-num">${String(i + 1).padStart(2, '0')}</span>

@@ -37,6 +37,7 @@ const INDUSTRIES = [
   { slug: 'automotive', name: 'Automotive', match: ['automotive', 'auto', 'workshop', 'workshops', 'cars', 'car'] },
   { slug: 'personal-branding', name: 'Personal Branding', match: ['personal-branding', 'personal-brending', 'personal-brand', 'creators'] },
   { slug: 'motion-graphics', name: 'Motion Graphics', match: ['motion-graphics', 'motion', 'animation'] },
+  { slug: 'ai-videos', name: 'AI Videos For Brands', match: ['ai-videos-for-brands', 'ai-videos', 'ai', 'other', 'others', 'misc'] },
 ];
 // The first five are always listed on the site, even before they have videos.
 const ALWAYS_LISTED = 5;
@@ -216,6 +217,19 @@ if (manifest.topAuto) {
       picked.forEach(list => { if (list[n] && manifest.top.length < 12) manifest.top.push({ ...list[n] }); });
     }
   } else manifest.top = manifest.industries.filter(i => i.items.length).map(i => ({ ...i.items[0] }));
+}
+
+// videos/top.txt lists reels that lead the Top slider, in order, ahead of the picks.
+const topList = path.join(SOURCE, 'top.txt');
+const featured = !fs.existsSync(topList) ? [] : fs.readFileSync(topList, 'utf8').split(/\r?\n/).map(line => line.trim())
+  .filter(line => line && !line.startsWith('#')).flatMap(line => {
+    const item = byFile.get(line.replace(/\\/g, '/').toLowerCase());
+    if (!item) console.log(`  top.txt: no video at "${line}"`);
+    return item ? [{ ...item }] : [];
+  });
+if (featured.length) {
+  const lead = new Set(featured.map(item => item.src));
+  manifest.top = [...featured, ...manifest.top.filter(item => !lead.has(item.src))];
 }
 
 // videos/wild.txt lists the reels that are scattered at random in the "In the wild" section.

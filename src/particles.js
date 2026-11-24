@@ -1,7 +1,7 @@
 import { reducedMotion, clamp } from './site.js';
 
-const RED = '#e4022f';
-const WHITE = '#f5f5f4';
+const RED = '#E9002B';
+const WHITE = '#14202B';
 const FONT = 'Poppins';
 
 /**
