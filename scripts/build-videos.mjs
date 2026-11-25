@@ -242,7 +242,7 @@ manifest.wild = !fs.existsSync(wildList) ? [] : fs.readFileSync(wildList, 'utf8'
   });
 
 // Remove outputs whose source video was deleted or renamed.
-for (const dir of fs.existsSync(OUT) ? fs.readdirSync(OUT, { withFileTypes: true }).filter(e => e.isDirectory() && e.name !== 'explainers') : []) {
+for (const dir of fs.existsSync(OUT) ? fs.readdirSync(OUT, { withFileTypes: true }).filter(e => e.isDirectory()) : []) {
   for (const file of fs.readdirSync(path.join(OUT, dir.name))) {
     if (!keep.has(`${dir.name}/${file}`)) fs.rmSync(path.join(OUT, dir.name, file));
   }

@@ -101,7 +101,7 @@ document.querySelectorAll('.svc-play').forEach(button => {
     event.preventDefault();
     event.stopPropagation();
     const key = button.dataset.explainer;
-    openLightbox([{ src: `media/explainers/${key}.mp4`, poster: `media/explainers/${key}.jpg`, width: 720, height: 1280 }]);
+    openLightbox([{ src: `explainers/${key}.mp4`, poster: `explainers/${key}.jpg`, width: 720, height: 1280 }]);
   });
 });
 
