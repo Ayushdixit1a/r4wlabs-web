@@ -3,6 +3,14 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const partials = path.resolve('src/partials');
+const servicesDirectory = path.resolve('services');
+const serviceInputs = fs.existsSync(servicesDirectory)
+  ? Object.fromEntries(fs.readdirSync(servicesDirectory, { withFileTypes: true })
+    .filter(entry => entry.isDirectory())
+    .map(entry => [entry.name, path.resolve(servicesDirectory, entry.name, 'index.html')])
+    .filter(([, file]) => fs.existsSync(file))
+    .map(([slug, file]) => [`service-${slug}`, file]))
+  : {};
 
 // Shared header, footer and loader markup: <!-- @include name --> pulls in src/partials/name.html.
 function htmlInclude() {
@@ -31,6 +39,7 @@ export default defineConfig({
       input: {
         home: path.resolve('index.html'),
         videoEditing: path.resolve('video-editing/index.html'),
+        ...serviceInputs,
       },
     },
   },

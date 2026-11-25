@@ -68,8 +68,10 @@ showReels();
 const SPARK_COLORS = ['#E4022F', '#FFD43B', '#ffffff', '#3EE6C1', '#8B5CF6'];
 document.querySelectorAll('.svc-box').forEach(card => {
   const img = card.querySelector('img');
+  let lastPlayedAt = -Infinity;
   function play(event) {
     if (reducedMotion.matches) return;
+    lastPlayedAt = performance.now();
     card.classList.remove('play');
     void card.offsetWidth;
     card.classList.add('play');
@@ -93,6 +95,12 @@ document.querySelectorAll('.svc-box').forEach(card => {
   img.addEventListener('animationend', event => { if (event.animationName === 'svc-dance') card.classList.remove('play'); });
   card.addEventListener('pointerenter', event => { if (event.pointerType === 'mouse' && !card.classList.contains('play')) play(event); });
   card.addEventListener('pointerdown', play);
+  card.addEventListener('click', event => {
+    if (card.tagName !== 'A' || reducedMotion.matches || event.button > 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    if (performance.now() - lastPlayedAt > 100) play(event);
+    window.setTimeout(() => { window.location.href = card.href; }, 450);
+  });
   card.addEventListener('keydown', event => { if (event.key === 'Enter' || event.key === ' ') { if (card.tagName !== 'A') event.preventDefault(); play(); } });
 });
 

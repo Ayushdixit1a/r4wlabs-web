@@ -1,0 +1,176 @@
+[
+  {
+    "slug": "video-editing", "name": "Video Editing", "icon": "/services/01-video-editing.webp",
+    "video": "/services/videos/video-editing.mp4", "poster": "/services/videos/video-editing.jpg",
+    "headline": ["Raw clips in.", "Scroll-stoppers out."],
+    "intro": "We turn your raw footage into short reels that people watch till the end, share and act on.",
+    "visual": "reels", "reelSource": "top",
+    "what": {
+      "lead": "Video editing is everything that happens after the camera stops.",
+      "points": ["Picking the best moments from hours of footage", "Cutting to the beat with hooks in the first second", "Colour grading so your brand looks the same every time", "Captions, sound design, motion text and transitions", "Exporting in the right size for Reels, Shorts and ads"]
+    },
+    "why": [
+      {"t": "Attention is 1 second", "d": "If the first second doesn't hook, people scroll. Editing decides that second."},
+      {"t": "Most people watch on mute", "d": "Clear captions and on-screen text carry your message without sound."},
+      {"t": "Consistency builds trust", "d": "The same look across every reel makes your brand easy to recognise."},
+      {"t": "Good edits sell", "d": "A tight reel explains your offer faster than any caption can."}
+    ],
+    "how": [
+      {"t": "Brief", "d": "We learn your goal, audience and the one thing every viewer should remember."},
+      {"t": "Select", "d": "We go through all your footage and pull the strongest shots."},
+      {"t": "Cut", "d": "Hook first, story next, call to action last. Timed to music and trends."},
+      {"t": "Polish", "d": "Colour, captions, sound effects and motion graphics."},
+      {"t": "Deliver", "d": "Ready-to-post files for every platform, with one round of changes included."}
+    ],
+    "proof": {"value": "20M+", "label": "views generated for the brands we edit for"}
+  },
+  {
+    "slug": "content-production", "name": "Content Production", "icon": "/services/02-content-production.webp",
+    "video": "/services/videos/content-production.mp4", "poster": "/services/videos/content-production.jpg",
+    "headline": ["We plan it, shoot it", "and make it sell."],
+    "intro": "Our crew comes to your café, clinic, hotel or site and shoots content built for social media.",
+    "visual": "reels", "reelSource": "all",
+    "what": {
+      "lead": "Content production is planning and shooting the photos and videos your brand posts.",
+      "points": ["Ideas and shot lists made for your audience", "On-location shoots: food, product, people and places", "Lighting, camera and direction handled by our crew", "Talent and props arranged when needed", "Footage handed straight to our editors"]
+    },
+    "why": [
+      {"t": "Phone photos look like everyone else", "d": "Planned shoots make you stand out in a crowded feed."},
+      {"t": "One shoot, a month of content", "d": "We plan each shoot so one day gives you many posts and reels."},
+      {"t": "Your space, at its best", "d": "Good light and angles show customers exactly why they should visit."},
+      {"t": "No stress for your team", "d": "We run the shoot so your staff can keep working."}
+    ],
+    "how": [
+      {"t": "Plan", "d": "We agree ideas, a shot list and a schedule with you."},
+      {"t": "Prep", "d": "Locations, props and people are lined up before the day."},
+      {"t": "Shoot", "d": "Our crew lights, directs and shoots every planned frame."},
+      {"t": "Edit", "d": "The footage goes straight to our editors, so nothing gets lost."},
+      {"t": "Post", "d": "You get finished content, ready for your calendar."}
+    ],
+    "proof": {"value": "35+", "label": "brands we've shot and created for"}
+  },
+  {
+    "slug": "meta-ads", "name": "Meta Ads", "icon": "/services/03-meta-ads.webp",
+    "video": "/services/videos/meta-ads.mp4", "poster": "/services/videos/meta-ads.jpg",
+    "headline": ["Ads that bring", "real customers."],
+    "intro": "We run Facebook and Instagram ads that turn people scrolling nearby into calls, bookings and sales.",
+    "visual": "funnel",
+    "what": {
+      "lead": "Meta Ads are paid posts on Facebook and Instagram, shown to the exact people you choose.",
+      "points": ["Targeting by area, age, interests and behaviour", "Ad creatives: reels, photos and carousels", "Lead forms, WhatsApp and call buttons", "Daily budget control and tracking", "Weekly reports in plain language"]
+    },
+    "why": [
+      {"t": "Reach people near you", "d": "Show your offer only to people in your city or area."},
+      {"t": "Pay for results", "d": "Every rupee is tracked, so you see what each lead costs."},
+      {"t": "Fast", "d": "Ads can bring enquiries within days, not months."},
+      {"t": "Scale what works", "d": "Once an ad performs, we put more budget behind it."}
+    ],
+    "how": [
+      {"t": "Goal", "d": "We set one clear target: leads, bookings, calls or sales."},
+      {"t": "Audience", "d": "We define who should see the ad and where they are."},
+      {"t": "Creative", "d": "We make ads that stop the scroll and explain the offer."},
+      {"t": "Launch and test", "d": "We test versions side by side to find the winner."},
+      {"t": "Optimise", "d": "We cut what doesn't work and scale what does, every week."}
+    ],
+    "proof": {"value": "25K+", "label": "leads every month through our ads, and ₹1Cr+ revenue generated"}
+  },
+  {
+    "slug": "social-media-management", "name": "Social Media Management", "icon": "/services/04-social-media-management.webp",
+    "video": "/services/videos/social-media-management.mp4", "poster": "/services/videos/social-media-management.jpg",
+    "headline": ["Your pages, posting", "and growing every week."],
+    "intro": "We run your Instagram and Facebook so they stay active, look good and bring customers in.",
+    "visual": "calendar",
+    "what": {
+      "lead": "Social media management means we look after your pages from start to finish.",
+      "points": ["A monthly content calendar", "Posts, reels and stories made and scheduled", "Captions and hashtags written for your audience", "Replies to comments and messages", "Monthly growth reports"]
+    },
+    "why": [
+      {"t": "Customers check you first", "d": "An active page tells people you're open, busy and trusted."},
+      {"t": "Consistency wins", "d": "Pages that post regularly grow faster than pages that post randomly."},
+      {"t": "Save your time", "d": "You run your business. We run your pages."},
+      {"t": "One clear voice", "d": "Every post sounds and looks like your brand."}
+    ],
+    "how": [
+      {"t": "Audit", "d": "We review your pages and your competitors."},
+      {"t": "Plan", "d": "We build a monthly calendar of posts, reels and stories."},
+      {"t": "Create", "d": "We design, shoot and edit everything on the calendar."},
+      {"t": "Post and reply", "d": "We publish on time and handle comments and messages."},
+      {"t": "Report", "d": "Every month you see what grew and what we'll do next."}
+    ],
+    "proof": {"value": "35+", "label": "brands whose pages we've managed and grown"}
+  },
+  {
+    "slug": "website-development", "name": "Website Development", "icon": "/services/05-website-development.webp",
+    "headline": ["Websites that load fast", "and turn visitors into leads."],
+    "intro": "We design and build websites that look great on phones, load quickly and make it easy to contact you.",
+    "visual": "browser",
+    "what": {
+      "lead": "Website development is designing, building and launching your business website.",
+      "points": ["Custom design that matches your brand", "Built for phones first", "Fast loading and basic SEO set up", "WhatsApp, call and enquiry buttons", "Domain, hosting and launch handled"]
+    },
+    "why": [
+      {"t": "Your 24/7 salesperson", "d": "Your website answers questions and takes enquiries while you sleep."},
+      {"t": "Trust", "d": "A clean, professional site makes people take you seriously."},
+      {"t": "Found on Google", "d": "People searching for what you offer can find you."},
+      {"t": "Ads need a home", "d": "A fast landing page makes every ad rupee work harder."}
+    ],
+    "how": [
+      {"t": "Discover", "d": "We learn what your customers need to see and do."},
+      {"t": "Design", "d": "We design the pages and share them for your feedback."},
+      {"t": "Build", "d": "We build it fast, mobile-friendly and easy to update."},
+      {"t": "Launch", "d": "We test everything, connect your domain and go live."},
+      {"t": "Support", "d": "We stay on hand for changes and updates."}
+    ],
+    "proof": {"value": "Phone-first", "label": "every site is designed for the screen your customers use most"}
+  },
+  {
+    "slug": "influencer-collabs", "name": "Influencer Collabs", "icon": "/services/06-influencer-collabs.webp",
+    "video": "/services/videos/influencer-collabs.mp4", "poster": "/services/videos/influencer-collabs.jpg",
+    "headline": ["The right creators,", "talking about you."],
+    "intro": "We find local creators your customers already follow and plan collabs that bring people through your door.",
+    "visual": "network",
+    "what": {
+      "lead": "Influencer collabs are partnerships where creators feature your brand to their followers.",
+      "points": ["Finding creators who fit your brand and city", "Checking their real reach and audience", "Briefs, scripts and visit planning", "Handling deals and timelines", "Tracking how each collab performed"]
+    },
+    "why": [
+      {"t": "Trust is borrowed", "d": "People believe creators they follow more than they believe ads."},
+      {"t": "Local reach", "d": "Indore creators reach Indore customers."},
+      {"t": "Content you can reuse", "d": "Creator videos can be shared on your page and used in ads."},
+      {"t": "Quick buzz", "d": "A launch or new menu gets noticed in days."}
+    ],
+    "how": [
+      {"t": "Shortlist", "d": "We pick creators whose audience matches your customers."},
+      {"t": "Vet", "d": "We check engagement and audience, not just follower count."},
+      {"t": "Brief", "d": "We share a clear brief so the content fits your brand."},
+      {"t": "Go live", "d": "We coordinate the visit, shoot and posting dates."},
+      {"t": "Measure", "d": "We track views, visits and enquiries from each collab."}
+    ],
+    "proof": {"value": "20M+", "label": "views generated across our campaigns"}
+  },
+  {
+    "slug": "business-analysis", "name": "Business Analysis", "icon": "/services/07-business-analysis.webp",
+    "video": "/services/videos/business-analysis.mp4", "poster": "/services/videos/business-analysis.jpg",
+    "headline": ["Know what works.", "Do more of it."],
+    "intro": "We look at your numbers and your marketing together and show you clearly where to grow.",
+    "visual": "chart",
+    "what": {
+      "lead": "Business analysis means reviewing your data to find what's working, what isn't and what to do next.",
+      "points": ["Sales, leads and ad results in one view", "Competitor and market check", "Customer journey review: where people drop off", "Clear priorities, not long reports", "Monthly check-ins on progress"]
+    },
+    "why": [
+      {"t": "Stop guessing", "d": "Decisions based on numbers beat decisions based on hunches."},
+      {"t": "Find wasted spend", "d": "See which channels cost money without bringing customers."},
+      {"t": "Spot opportunities", "d": "Find the offers, times and places that sell best."},
+      {"t": "Grow with a plan", "d": "Know exactly what to fix first and what to scale."}
+    ],
+    "how": [
+      {"t": "Collect", "d": "We gather your sales, ads, social and website numbers."},
+      {"t": "Analyse", "d": "We find patterns, gaps and quick wins."},
+      {"t": "Report", "d": "You get a short, clear summary with charts."},
+      {"t": "Plan", "d": "We agree the top actions for the next month."},
+      {"t": "Review", "d": "We check results and adjust every month."}
+    ],
+    "proof": {"value": "₹1Cr+", "label": "revenue generated for the businesses we work with"}
+  }
+]
