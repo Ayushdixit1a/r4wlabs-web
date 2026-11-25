@@ -70,6 +70,7 @@ function getLightbox() {
   dialog.querySelector('.lb-close').addEventListener('click', () => dialog.close());
   dialog.addEventListener('click', e => { if (e.target === dialog || e.target.classList.contains('lb-in')) dialog.close(); });
   dialog.addEventListener('keydown', e => {
+    if (items.length < 2) return;
     if (e.key === 'ArrowLeft') show(index - 1);
     if (e.key === 'ArrowRight') show(index + 1);
   });
@@ -89,6 +90,10 @@ function getLightbox() {
     },
   };
   return lightbox;
+}
+
+export function openLightbox(items, index = 0) {
+  getLightbox().open(items, index);
 }
 
 /**
