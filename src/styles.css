@@ -421,7 +421,7 @@ html { overflow-x: clip; }
 
 /* ───────── Home services grid ───────── */
 .svc-grid { --gap: clamp(10px, 2vw, 28px); display: flex; flex-wrap: wrap; justify-content: center; gap: var(--gap); }
-.svc-box { position: relative; display: block; flex: 0 0 calc((100% - 2 * var(--gap)) / 3); aspect-ratio: 3 / 2; cursor: pointer; outline: none; -webkit-tap-highlight-color: transparent; }
+.svc-box { position: relative; container-type: inline-size; display: block; flex: 0 0 calc((100% - 2 * var(--gap)) / 3); aspect-ratio: 3 / 2; cursor: pointer; outline: none; -webkit-tap-highlight-color: transparent; }
 .svc-box.reveal { transition-delay: calc(var(--i) * 70ms); }
 .svc-box img { display: block; width: 100%; height: 100%; object-fit: contain; transform-origin: 50% 88%; animation: svc-idle calc(3.2s + var(--i) * .27s) ease-in-out infinite; animation-delay: calc(var(--i) * -.45s); transition: filter .4s var(--ease); }
 .svc-box:focus-visible img { filter: drop-shadow(0 0 2px var(--red)); }
@@ -429,9 +429,9 @@ html { overflow-x: clip; }
 .svc-cover { display: block; width: 100%; height: 100%; color: inherit; }
 .svc-link { position: absolute; right: 8%; bottom: 2%; z-index: 2; padding: 8px 12px; border: 1px solid rgba(255, 255, 255, .2); border-radius: 999px; background: rgba(5, 5, 6, .72); color: #fff; font: 700 11px/1 var(--mono); letter-spacing: .04em; }
 .svc-play { position: absolute; left: 8%; bottom: 2%; z-index: 3; display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; border: 0; border-radius: 999px; background: var(--red); color: #fff; font: 700 11px/1 var(--mono); letter-spacing: .04em; cursor: pointer; }
-.svc-cover + .svc-play { bottom: calc(2% + 38px); }
 .svc-play svg { width: 12px; height: 12px; }
 .svc-play:hover, .svc-play:focus-visible { background: #fff; color: #000; }
+@container (max-width: 355.77px) { .svc-cover + .svc-play { font-size: 0; gap: 0; padding: 8px; } }
 .svc-box:hover .svc-link { border-color: var(--red); background: var(--red); }
 .svc-spark { position: absolute; left: 0; top: 0; z-index: 3; width: var(--s, 12px); height: var(--s, 12px); margin: calc(var(--s, 12px) / -2); background: var(--c); pointer-events: none; clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%); }
 @keyframes svc-idle { 50% { transform: translateY(-7px) rotate(-.6deg); } }
