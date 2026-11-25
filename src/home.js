@@ -1,7 +1,7 @@
 import { initCommon } from './common.js';
 import { playLoader } from './loader.js';
 import { initParticleWord } from './particles.js';
-import { loadReels, mountReels, mountCarousel } from './reels.js';
+import { loadReels, mountReels, mountCarousel, openLightbox } from './reels.js';
 import { whatsappLink, reducedMotion, finePointer } from './site.js';
 
 const { watchReveal } = initCommon();
@@ -93,7 +93,16 @@ document.querySelectorAll('.svc-box').forEach(card => {
   img.addEventListener('animationend', event => { if (event.animationName === 'svc-dance') card.classList.remove('play'); });
   card.addEventListener('pointerenter', event => { if (event.pointerType === 'mouse' && !card.classList.contains('play')) play(event); });
   card.addEventListener('pointerdown', play);
-  card.addEventListener('keydown', event => { if (event.key === 'Enter' || event.key === ' ') { if (card.tagName !== 'A') event.preventDefault(); play(); } });
+  card.addEventListener('keydown', event => { if (event.target === card && (event.key === 'Enter' || event.key === ' ')) { event.preventDefault(); play(); } });
+});
+
+document.querySelectorAll('.svc-play').forEach(button => {
+  button.addEventListener('click', event => {
+    event.preventDefault();
+    event.stopPropagation();
+    const key = button.dataset.explainer;
+    openLightbox([{ src: `media/explainers/${key}.mp4`, poster: `media/explainers/${key}.jpg`, width: 720, height: 1280 }]);
+  });
 });
 
 if (finePointer.matches) {

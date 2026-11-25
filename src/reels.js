@@ -91,6 +91,10 @@ function getLightbox() {
   return lightbox;
 }
 
+export function openLightbox(items, index = 0) {
+  getLightbox().open(items, index);
+}
+
 /**
  * Horizontal reel slider. Each card loops a short muted preview while it is on screen;
  * clicking opens the full reel with sound.
