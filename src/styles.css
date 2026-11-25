@@ -625,6 +625,7 @@ body { background: radial-gradient(130% 95% at 82% -18%, rgba(255,255,255,.7) 0%
 .page-service .sec { padding: clamp(28px, 2.5vw, 36px) 0; }
 .svc-hero { min-height: 0; height: auto; padding: 120px 0 40px; }
 .svc-hero-inner { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(260px, .8fr); align-items: center; gap: clamp(22px, 5vw, 72px); }
+.svc-hero-inner:has(.svc-hero-video-wrap) { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); }
 .svc-hero-copy { min-width: 0; }
 .svc-hero-copy .back { display: inline-flex; margin-bottom: 28px; }
 .svc-hero-copy .eyebrow { margin-bottom: 16px; }
@@ -635,8 +636,8 @@ body { background: radial-gradient(130% 95% at 82% -18%, rgba(255,255,255,.7) 0%
 .svc-hero-actions .btn-ghost:hover { border-color: var(--text); background: var(--text); color: #fff; }
 .svc-hero-icon-wrap { display: grid; min-width: 0; place-items: center; }
 .svc-hero-icon { width: min(100%, 470px); height: auto; object-fit: contain; filter: drop-shadow(0 24px 30px rgba(20, 40, 70, .18)); animation: svc-idle 4.6s ease-in-out infinite; }
-.svc-hero-video-wrap { position: relative; display: grid; min-width: 0; place-items: center; }
-.svc-hero-video-frame { position: relative; width: clamp(240px, 26vw, 340px); aspect-ratio: 9 / 16; overflow: hidden; border: 2px solid rgba(255, 255, 255, .96); border-radius: 28px; background: #14202b; box-shadow: 0 16px 34px -30px rgba(20, 32, 43, .35); }
+.svc-hero-video-wrap { position: relative; display: flex; min-width: 0; align-items: flex-end; justify-content: center; gap: clamp(10px, 1.4vw, 22px); }
+.svc-hero-video-frame { position: relative; flex: 0 0 auto; width: clamp(230px, 24vw, 340px); aspect-ratio: 9 / 16; overflow: hidden; border: 2px solid rgba(255, 255, 255, .96); border-radius: 28px; background: #14202b; box-shadow: 0 16px 34px -30px rgba(20, 32, 43, .35); }
 .svc-hero-video { display: block; width: 100%; height: 100%; object-fit: cover; }
 .svc-hero-video-play, .svc-hero-video-sound { position: absolute; z-index: 2; display: grid; place-items: center; border: 1px solid rgba(255, 255, 255, .72); border-radius: 50%; background: rgba(20, 32, 43, .58); color: #fff; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); cursor: pointer; }
 .svc-hero-video-play { top: 50%; left: 50%; width: 64px; height: 64px; opacity: 0; pointer-events: none; transform: translate(-50%, -50%); transition: opacity .2s, visibility .2s; visibility: hidden; }
@@ -648,7 +649,7 @@ body { background: radial-gradient(130% 95% at 82% -18%, rgba(255,255,255,.7) 0%
 .svc-hero-video-sound.is-unmuted [data-muted-icon] { display: none; }
 .svc-hero-video-sound.is-unmuted [data-sound-icon] { display: block; }
 .svc-hero-video-play:focus-visible, .svc-hero-video-sound:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
-.svc-hero-video-icon { position: absolute; z-index: 3; bottom: 10px; left: calc(50% - clamp(120px, 13vw, 170px) - 32px); width: clamp(116px, 13vw, 188px); height: auto; object-fit: contain; animation: svc-idle 4.6s ease-in-out infinite; }
+.svc-hero-video-icon { order: -1; flex: 0 1 clamp(120px, 14vw, 210px); min-width: 0; width: clamp(120px, 14vw, 210px); height: auto; margin-bottom: 8px; object-fit: contain; animation: svc-idle 4.6s ease-in-out infinite; }
 .svc-frosted { border: 1px solid rgba(255, 255, 255, .88); border-radius: 26px; background: rgba(255, 255, 255, .68); -webkit-backdrop-filter: blur(20px) saturate(135%); backdrop-filter: blur(20px) saturate(135%); box-shadow: 0 20px 50px -32px rgba(20, 40, 70, .45); }
 .svc-overview-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); align-items: stretch; gap: clamp(16px, 2.2vw, 28px); }
 .svc-what-panel { padding: clamp(24px, 3vw, 42px); }
@@ -785,7 +786,7 @@ body { background: radial-gradient(130% 95% at 82% -18%, rgba(255,255,255,.7) 0%
 @media (max-width: 720px) {
   .page-service .sec { padding: 22px 0; }
   .svc-hero { padding: 96px 0 28px; }
-  .svc-hero-inner { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  .svc-hero-inner, .svc-hero-inner:has(.svc-hero-video-wrap) { grid-template-columns: minmax(0, 1fr); gap: 18px; }
   .svc-hero-icon-wrap { order: -1; }
   .svc-hero-icon { width: min(70vw, 280px); }
   .svc-hero-video-wrap { order: 1; }
